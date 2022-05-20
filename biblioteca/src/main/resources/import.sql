@@ -1,0 +1,11 @@
+--INSERT INTO tb_funcionarios(nome, cpf) VALUES ('Raimundo Andrade', '123.123.123-12');
+--INSERT INTO tb_funcionarios(nome, cpf) VALUES ('Maria Joaquina', '12312312312');
+--INSERT INTO tb_funcionarios(nome, cpf) VALUES ('Carmem Lúcia da Silva Soares', '123.123.123.12');
+--INSERT INTO tb_funcionarios(nome, cpf) VALUES ('João Otávio Siqueira Santos', '12312312312');
+--INSERT INTO tb_funcionarios(nome, cpf) VALUES ('Silvio Santos Costa e Silva', '123.123.12312');
+--
+--INSERT INTO tb_clientes(nome, cpf) VALUES ('Ana Clara', '123.123.123-12');
+--INSERT INTO tb_clientes(nome, cpf) VALUES ('Pedro Henrique', '12312312312');
+--INSERT INTO tb_clientes(nome, cpf) VALUES ('Iasmim Isabelly', '123.123.123.12');
+--INSERT INTO tb_clientes(nome, cpf) VALUES ('Alexandre Vieira', '12312312312');
+--INSERT INTO tb_clientes(nome, cpf) VALUES ('Testildo Testado', '123.123.12312');
