@@ -68,6 +68,7 @@ public class ClienteController {
 
     @PostMapping("/inserirPorCep")
     public ResponseEntity<Cliente> inserirPorCep(@RequestBody @Valid Cliente cliente) {
+        log.info(dateUtil.dataFormatada(LocalDateTime.now()).concat(" /POST inserirPorCep"));
         Cliente cliente1 = new Cliente();
         BeanUtils.copyProperties(cliente, cliente1);
         cliente.setCreateAt(LocalDateTime.now());
