@@ -29,7 +29,7 @@ public class ClienteController {
     private DateUtil dateUtil;
 
     @PostMapping
-    public ResponseEntity<Cliente> save(@RequestBody ClienteDTO clienteDTO) {
+    public ResponseEntity<Cliente> save(@RequestBody @Valid ClienteDTO clienteDTO) {
         log.info(dateUtil.dataFormatada(LocalDateTime.now()).concat(" /POST save"));
         Cliente cliente = new Cliente();
         BeanUtils.copyProperties(clienteDTO, cliente);
@@ -67,11 +67,12 @@ public class ClienteController {
     }
 
     @PostMapping("/inserirPorCep")
-    public ResponseEntity<Cliente> inserirPorCep(@RequestBody @Valid ClienteDTO clienteDTO) {
-        Cliente cliente = new Cliente();
-        BeanUtils.copyProperties(clienteDTO, cliente);
+    public ResponseEntity<Cliente> inserirPorCep(@RequestBody @Valid Cliente cliente) {
+        Cliente cliente1 = new Cliente();
+        BeanUtils.copyProperties(cliente, cliente1);
         cliente.setCreateAt(LocalDateTime.now());
         clienteService.inserirPorCep(cliente);
+        cliente.setCreateAt(LocalDateTime.now());
         return ResponseEntity.ok(cliente);
     }
 }
